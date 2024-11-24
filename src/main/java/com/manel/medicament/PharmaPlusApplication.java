@@ -6,7 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 
-
+import com.manel.medicament.entities.Commande;
+import com.manel.medicament.entities.Employee;
 import com.manel.medicament.entities.medicament;
 
 @SpringBootApplication
@@ -18,7 +19,7 @@ public class PharmaPlusApplication implements CommandLineRunner{
 	}
 	@Override
 	public void run(String... args) throws Exception {
-	repositoryRestConfiguration.exposeIdsFor(medicament.class);
+	repositoryRestConfiguration.exposeIdsFor(medicament.class,Employee.class,Commande.class);
 	}
 
 }

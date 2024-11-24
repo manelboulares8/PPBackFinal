@@ -1,5 +1,4 @@
 package com.manel.medicament;
-
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
